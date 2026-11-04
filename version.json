@@ -1,0 +1,12 @@
+{
+  "version_code": 120,
+  "version_name": "1.0.20",
+  "min_supported_version_code": 1,
+  "changelog": [
+    "Gravity Phone Design System: Cosmic dark theme, frosted glass cards, and floating pill navigation",
+    "Google Drive rootfs bootstrap direct download integration",
+    "Native Developer Terminal, Conversational AI Studio & Mobile IDE Workspace styling",
+    "GitHub Cloud Compiler & Release Pipeline Runner"
+  ],
+  "is_critical": false
+}

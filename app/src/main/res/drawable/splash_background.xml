@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cosmic Black splash background -->
+    <item>
+        <color android:color="#0A0C10" />
+    </item>
+
+    <!-- Centered Gravity Phone Logo -->
+    <item
+        android:gravity="center"
+        android:width="200dp"
+        android:height="80dp">
+        <bitmap
+            android:src="@drawable/gravity_phone_logo_white"
+            android:filter="true"
+            android:antialias="true"
+            android:dither="true"
+            android:gravity="center" />
+    </item>
+</layer-list>
