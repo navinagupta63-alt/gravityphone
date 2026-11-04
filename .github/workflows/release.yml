@@ -57,8 +57,9 @@ jobs:
 
       - name: Build Release APKs
         run: |
+          sed -i 's/\r$//' gradlew scripts/build_all_apks.sh
           chmod +x gradlew scripts/build_all_apks.sh
-          ./scripts/build_all_apks.sh --release
+          bash scripts/build_all_apks.sh --release
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
