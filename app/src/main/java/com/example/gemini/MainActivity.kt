@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.ime
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.graphics.graphicsLayer
@@ -409,7 +410,6 @@ class MainActivity : ComponentActivity() {
                                 }
 
                                 // Persistent System Settings & Diagnostics Screen
-                                var showFullSettingsDialog by remember { mutableStateOf(false) }
                                 Box(
                                     modifier = Modifier
                                         .fillMaxSize()
@@ -421,17 +421,9 @@ class MainActivity : ComponentActivity() {
                                 ) {
                                     if (currentViewMode == AppViewMode.SETTINGS) {
                                         com.example.gemini.ui.settings.SettingsDiagnosticsScreen(
-                                            viewModel = chatViewModel,
-                                            onOpenFullSettings = { showFullSettingsDialog = true }
+                                            viewModel = chatViewModel
                                         )
                                     }
-                                }
-
-                                if (showFullSettingsDialog) {
-                                    com.example.gemini.ui.settings.SettingsDialog(
-                                        onDismiss = { showFullSettingsDialog = false },
-                                        viewModel = chatViewModel
-                                    )
                                 }
 
                                 // Floating App Switcher Across Whole App (Renders on top of Chat, IDE, Terminal, Browser)

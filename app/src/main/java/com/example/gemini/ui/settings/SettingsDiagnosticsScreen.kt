@@ -321,7 +321,7 @@ fun SettingsDiagnosticsScreen(
                     TelemetryRow("OS Environment", "Ubuntu 24.04 PRoot / glibc 2.39")
                     TelemetryRow("Kernel Emulation", "Accelerated syscall shim (ARM64)")
                     TelemetryRow("CPU Architecture", hardwareInfo.arch)
-                    TelemetryRow("Virtual Address", if (hardwareInfo.vaBits > 0) "${hardwareInfo.vaBits}-bit" else "48-bit (VA48)")
+                    TelemetryRow("Virtual Address", if ((hardwareInfo.vaBits ?: 0) > 0) "${hardwareInfo.vaBits}-bit" else "48-bit (VA48)")
                     TelemetryRow("LSE Atomics", if (hardwareInfo.hasAtomics == true) "Hardware Supported" else "Emulated")
                     TelemetryRow("Bridge Port", "1234 (gRPC) / 8765 (MCP)")
                 }

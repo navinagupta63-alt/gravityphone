@@ -1114,7 +1114,7 @@ fun ChatScreen(
             topBar = {
                 com.example.gemini.ui.components.GravityTopAppBar(
                     onMenuClick = { scope.launch { drawerState.open() } },
-                    onNewChatClick = { viewModel.startNewConversation() },
+                    onNewChatClick = { viewModel.startNewChat() },
                     onToggleTheme = {
                         val nextMode = if (isDarkTheme) "LIGHT" else "DARK"
                         viewModel.setThemeMode(nextMode)

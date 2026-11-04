@@ -123,7 +123,7 @@ private fun GravityNavItem(
             .clip(RoundedCornerShape(16.dp))
             .clickable { onClick() }
             .padding(horizontal = 10.dp, vertical = 6.dp),
-        horizontalAlignment = Alignment.CenterVertically,
+        horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Icon(
